@@ -1,30 +1,10 @@
-import 'package:learning_dart/learning_dart.dart' as learning_dart;
+import 'dart:io';
 
 void main(List<String> arguments) {
+  stdout.write('Escribe tu nombre\r\n');
+  var name = stdin.readLineSync();
 
-  String name  = 'Jose Antonio Perez';
-  print(name);
-  print('Hello ${name}');
-
-
-  //get a substring
-
-  String firstname = name.substring(0,5);
-  print(firstname);
-  
-  //get the index
-  
-  int index = name.indexOf('');
-  String lastname = name.substring(index).trim();
-  print('lastname = ${lastname}');
-
-  //length
-
-  print(name.length);
-
-  //contains
-
-  print(name.contains('Perez'));
-
-
+  name.isEmpty
+      ? stderr.write('No puedes dejarlo vacio')
+      : stdout.write('Hola ${name}');
 }
