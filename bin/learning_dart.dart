@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 void main(List<String> arguments) {
   var test = [1, 2, 3, 4, 5, 6];
   print(test.length);
@@ -19,8 +21,22 @@ void main(List<String> arguments) {
 
   print(numbers);
 
+//Queue
 
-  //Sets
+  var items = Queue();
+  items.add(1);
+  items.add(3);
+  items.add(2);
+  items.add(5);
 
+  items.removeFirst();
+  print(items);
 
+  //maps
+
+  // ignore: omit_local_variable_types
+  Map people  = {'marza' : '3', 'toyota' : 'corolla', 'Nissan' : 'sentra', 'Renault' : 'Clio'};
+  print(people);
+  print(people.keys);
+  print(people.values);
 }
